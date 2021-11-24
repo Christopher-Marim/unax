@@ -73,7 +73,6 @@ export function LoginScreen() {
               placeholder="Email"
             />
             <Input
-              
               onChange={ChangeTextPassoword}
               value={passwordText}
               type="password"
