@@ -6,5 +6,5 @@ export const Container = styled.div`
   width:100%;
   justify-content: center;
   align-items: center;
-  background:linear-gradient(rgba(18, 0, 2), rgba(0, 0, 0));
+  background:linear-gradient(#1b1b1f, rgba(0, 0, 0));
 `;

@@ -10,6 +10,7 @@ export const Global = createGlobalStyle`
   :root {
       font-size: ${px2vw(24)};
       font-family: 'Roboto', sans-serif ;
+      color:#37373d;
 
       @media (min-width: 768px) {
         font-size: ${px2vw(18)};

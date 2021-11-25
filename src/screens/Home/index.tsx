@@ -1,3 +1,4 @@
+import { ChartsComponent } from "../../components/Charts";
 import { HeaderComponent } from "../../components/Header";
 import { Container } from "./styles";
 
@@ -7,6 +8,7 @@ export function HomeScreen(){
             <HeaderComponent>
                 <img src='http://2407oilanalysis.unax.com.br/templates/unax/site/images/logo-min.png'></img>
             </HeaderComponent>
+            <ChartsComponent></ChartsComponent>
         </Container>
     );
 }
