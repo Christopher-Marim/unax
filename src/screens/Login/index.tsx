@@ -57,7 +57,6 @@ export function LoginScreen() {
   return (
     <>
       {loading && <Loader />}
-
       <Container>
         <Image>
         <Logo src={`http://2407oilanalysis.unax.com.br/templates/unax/site/images/offshore.png`} />
@@ -78,7 +77,7 @@ export function LoginScreen() {
               type="password"
               placeholder="Senha"
             />
-            <Button type="button" onClick={HandleClickLogin}>
+            <Button type="button" onClick={()=>{navigate("/pages/home");}}>
               Entrar
             </Button>
             <Link href="http://www.etm.srv.br/" target="_blank">

@@ -23,8 +23,8 @@ export const Image = styled.aside`
   align-items: center;
   height: 100vh;
   max-width: 100%;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url(${imagem});
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.8)),
+    url('${imagem}');
   background-size: cover;
   background-position: center;
   z-index: 1;
@@ -79,7 +79,7 @@ export const Input = styled.input`
   border-radius: 8px;
   padding: 0 16px;
   margin: 5px;
-  background-color: #fff;
+  background-color: white;
   width: 100%;
   max-width: 320px;
   border: 2px solid #a8a8b3;
