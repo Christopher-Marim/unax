@@ -1,14 +1,21 @@
-import styled  from 'styled-components';
+import styled from 'styled-components';
 
 export const Container = styled.div`
     display: flex;
     justify-content: baseline;
     border-radius:10px;
+    flex-direction: column;
     padding:20px;
     align-items: flex-start;
     background-color: white;
-    width:50%;
+    width:58rem;
     height: 400px;
+
+    .containerChart{
+        display: flex;
+        justify-content:center;
+        width:100%;
+    }
 `
 
 export const NavBar = styled.div`
