@@ -34,15 +34,16 @@ interface Props {
 
 export function StackedBarChart({ data }: Props) {
   const options = {
-    legend: {
-      display: false,
-    },
+    
     responsive: true,
     maintainAspectRatio: false,
     plugins: {
       title: {
         display: true,
         text: "Grafico empresa X",
+      },
+      legend: {
+        display: false,
       },
     },
     scales: {

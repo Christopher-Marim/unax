@@ -27,6 +27,7 @@ export const Image = styled.img`
     width:100px;
     height: 100px;
     object-fit: cover;
+    cursor:pointer;
 `
 export const Buttons = styled.div`
     display: flex;
