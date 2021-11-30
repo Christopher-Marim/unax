@@ -9,7 +9,9 @@ export const Container = styled.div`
     border-radius: 10px;
     padding:10px;
     width:100%;
+    height: 250px;
     margin-top:10px;
+    
 `
 export const InfosCard = styled.div`
     display: flex;
@@ -28,6 +30,8 @@ export const InfosCard = styled.div`
 export const Buttons = styled.div`
     display: flex;
     flex-wrap: wrap;
+    transition: 400ms ease-in-out;
+
 `
 export const Button = styled.a`
     display: flex;
@@ -35,28 +39,11 @@ export const Button = styled.a`
     text-decoration: none;
     padding:10px;
     margin:10px;
-    background-color: #0080ff;
+    background-color: ${props => props.color || '#0080ff'};;
     color:white;
     border-radius: 50%;
     cursor:pointer;
-`
-export const ButtonSelect = styled.a`
-    display: flex;
-    align-items: flex-start;
-    text-decoration: none;
-    padding:10px;
-    margin:10px;
-    background-color: #0080ff;
-    color:white;
-    border-radius: 15px;
-    cursor:pointer;
-
-    select{
-        background-color: transparent;
-        color:white;
-        border-style: none;
-        font-size: 18px;
-    }
+    transition: 400ms ease-in-out;
 `
 
 export const WrapperChart = styled.div`
@@ -65,3 +52,49 @@ export const WrapperChart = styled.div`
     justify-content:center;
     align-items:center;
 `
+
+export const Search = styled.div`
+    display:flex;
+    align-items: center;
+    justify-content: baseline;
+    flex-direction: column;
+    margin:20px;
+    position: relative;
+    min-height: 100%;
+    width: 90%;
+
+    input{
+     padding:10px;
+     width: 100%;
+     border:1px solid black;
+     border-radius: 5px;
+     font-size: 15px;
+    }
+
+    div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin:10px;
+        max-height: 150px;
+        overflow-y: auto;
+        overflow-x:hidden;
+        width:100%;
+    }
+`;
+export const Equipament = styled.a`
+    display:flex;
+    width: 100%;
+    padding:10px;
+    background-color: white;
+    border:1px solid gray;
+    margin:1px;
+    border-radius:2px;
+    font-size: 14px;
+    cursor:pointer;
+
+    &:hover{
+        background-color: #222;
+        color:white;
+    }
+`;
