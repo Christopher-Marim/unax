@@ -39,8 +39,7 @@ export function StackedBarChart({ data }: Props) {
     maintainAspectRatio: false,
     plugins: {
       title: {
-        display: true,
-        text: "Grafico empresa X",
+        display: false,
       },
       legend: {
         display: false,

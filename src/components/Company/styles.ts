@@ -24,9 +24,9 @@ export const Container = styled.a`
 `
 export const Image = styled.img`
     margin:40px 0px;
-    width:100px;
-    height: 100px;
-    object-fit: cover;
+    width:90%;
+    max-height: 100px;
+    object-fit: contain;
     cursor:pointer;
 `
 export const Buttons = styled.div`

@@ -9,7 +9,13 @@ import { FiEdit } from "react-icons/fi";
 import { StackedBarChart } from "../StackedBarChart";
 import { useNavigate } from "react-router";
 
-export function CompanyComponent() {
+interface companyProps{
+  id:string;
+  name:string;
+  image:string;
+}
+
+export function CompanyComponent({id, name, image}:companyProps) {
   const labels = ["January", "February"];
   const navigate = useNavigate();
 
@@ -28,13 +34,12 @@ export function CompanyComponent() {
       },
     ],
   };
+
   return (
     <Container>
       <Image
         onClick={()=>{ navigate("/pages/currentCompany");}}
-        src={
-          "http://2407oilanalysis.unax.com.br/resources/uploads/Cliente/b80998a6-148a-491a-95a8-24db32b597e5/CBX.jpg"
-        }
+        src={image}
       />
       <Buttons>
         <Button color="#d1b745">
