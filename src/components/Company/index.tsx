@@ -8,6 +8,7 @@ import { BsEnvelope } from "react-icons/bs";
 import { FiEdit } from "react-icons/fi";
 import { StackedBarChart } from "../StackedBarChart";
 import { useNavigate } from "react-router";
+import { useCurrent } from "../../hooks/state";
 
 interface companyProps{
   id:string;
@@ -18,6 +19,7 @@ interface companyProps{
 export function CompanyComponent({id, name, image}:companyProps) {
   const labels = ["January", "February"];
   const navigate = useNavigate();
+  const {setCompany} = useCurrent();
 
   const data = {
     labels,
@@ -35,10 +37,17 @@ export function CompanyComponent({id, name, image}:companyProps) {
     ],
   };
 
+  function handleClickCompany(){
+    //Fazer requisição a api da company para pegar os cards da mesma, usando o id dela
+    //após receber requisição usar o o setCompany e navegar para a screen da company
+
+    navigate("/pages/currentCompany")
+  }
+
   return (
     <Container>
       <Image
-        onClick={()=>{ navigate("/pages/currentCompany");}}
+        onClick={()=>{handleClickCompany()}}
         src={image}
       />
       <Buttons>

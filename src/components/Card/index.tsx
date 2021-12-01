@@ -13,6 +13,7 @@ import { AiOutlineSchedule } from "react-icons/ai";
 import { HiOutlineDocumentReport } from "react-icons/hi";
 import { VscTools } from "react-icons/vsc";
 import { useState } from "react";
+import { useNavigate } from "react-router";
 
 interface ArrayEquipament {
   id: number;
@@ -22,6 +23,8 @@ interface ArrayEquipament {
 export function CardComponent() {
   const [valueInput, setValueInput] = useState<string>();
   const [searchEquipamentStatus, setSearchEquipamentStatus] = useState(false);
+
+  const navigate = useNavigate();
 
   const arrayEquipaments: ArrayEquipament[] = [
     { id: 1, cod: "2514", name: "Motor de Bitorneira" },
@@ -88,7 +91,7 @@ export function CardComponent() {
             {arrayEquipamentsAux.map((x) => (
               <>
                 {x && (
-                  <Equipament key={x?.id}>
+                  <Equipament key={x?.id} onClick={(()=>{navigate('/pages/currentEquipament')})}>
                     <strong>Cod:{x?.cod}</strong> - {x?.name}
                   </Equipament>
                 )}

@@ -1,11 +1,17 @@
 import React, { createContext, useState,  useContext } from "react";
 
 
+interface Equipament{
+  id:string;
+  cod:string;
+  name:string;
+}
 interface CurrentCompany {
   id: string;
-  nome: string;
-  cnpj_cpf: string;
-  logocliente: string;
+  name: string;
+  contact: string;
+  email: string;
+  equipaments: Equipament[];
 }
 interface StateContextData {
   currentCompany: CurrentCompany | null;
